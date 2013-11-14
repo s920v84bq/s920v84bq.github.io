@@ -1,1 +1,163 @@
-<html>test1</html>
+<!doctype html>
+<html>
+	<head>
+		<title>Survey of Jobs</title>
+		<script src="https://googledrive.com/host/0Bw8djCv835LdMlYzeFY5WmNhakU/Chart.min.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		<style>
+			canvas{
+			}
+		</style>
+	</head>
+	<body>
+<center>
+<h1><u>Keywords/concepts found in computer support job advertisements.</u></h1>
+<br>
+<div style="background-color:lightyellow;width:900px">
+<br>
+<font style="font-size:20px; font-weight:bold;">Study Methods</font>
+<br>
+On 11/11/13-11/12/13 indeed.com was searched for the keywords "computer support" or "pc support" or "desktop support" or "help desk" in <br>
+Philadelphia, PA.  100 of the first advertisement results were used, some others were filtered out for irrelevance.  Mainly the requirements<br>
+section of the advertisements was used and others were ignored at times.  Common keywords/concepts were observed and <br>
+manually counted in the advertisements.<br>
+Note: if associates degree was a minimum requirement listed a batchlors degree mention was not counted because the minimum<br>
+degree was looked for.
+<br>
+<br>
+</div>
+<br>
+<br>
+<div style="background-color:lightblue;width:900px">
+<br>
+<font style="font-size:20px; font-weight:bold;">Disclaimer</font>
+<br>
+This is an informal and non-scientific survey, some known inaccuracies exist such as underrepresentation of rarer categories, <br>
+overlapping categories with data missing from one but not another category, and others.  The author still considers this survey to be a <br>
+useful comparison in the general sense and worth looking over.  No warrenty of any kind is provided for the data's use, interpretations are <br>
+made at each users' own risk. 
+<br>
+<br>
+</div>
+<br>
+<br>
+		<canvas id="canvas" height="450" width="1800"></canvas>
+
+
+	<script>
+
+		var barChartData = {
+			labels : ["Windows","Office","Networking","PC hardware support","Customer Service","Mobile Tech./Phone Support","General software support","Batchelors Deg.","Active Directory","A+ Cert.","Install/Troubleshoot/Repair","Associates degree","Printers/Scanner/Copier","Apple","Exchange","Ticketing","Network+ Cert.","MCDST/MCSA Cert.","Clients/Servers","Lotus notes","Unix/Linux","MCP Cert","Citrix","Remote Access/Support","Video","Audio","Call Center","Enterprise","Databases"],
+			datasets : [
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [69,55,49,45,42,29,27,26,24,20,17,16,14,14,12,12,11,10,8,7,7,6,6,6,4,3,3,2,2]
+				}
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+	
+	</script>
+<br>
+<br>
+<canvas id="canvas3" height="450" width="600"></canvas>
+
+
+	<script>
+
+		var barChartData3 = {
+			labels : ["no years stated","1 year","2 years","3 years","4+ years"],
+			datasets : [
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [39,25,13,19,4]
+				}
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("canvas3").getContext("2d")).Bar(barChartData3);
+	
+	</script>
+<br>
+<br>
+<font style="font-size:20px; font-weight:bold;">Here are the percentages of the keyword/concept per each minimum years of experience category:
+<br>
+<br>
+<br>
+Years of experience required:
+<label style="background-color:rgba(50,187,205,0.5);color:rgba(50,187,205,0.5)">------------</label> 0 years
+<label style="background-color:rgba(200,200,200,0.5);color:rgba(50,187,205,0.5)">------------</label> 1 year
+<label style="background-color:rgba(100,100,220,0.5);color:rgba(100,100,220,0.5)">------------</label> 2 years
+<label style="background-color:rgba(100,187,100,0.5);color:rgba(100,187,100,0.5)">------------</label> 3 years
+<label style="background-color:rgba(150,50,50,0.5);color:rgba(150,50,50,0.5)">------------</label> 4+ years
+</font>
+<br>
+<br>
+	<canvas id="canvas2" height="450" width="1800"></canvas>
+<script>
+
+		var barChartData2 = {
+			labels : ["Windows","Office","Networking","PC hardware support","Customer Service","Mobile Tech./Phone Support","General software support","Batchelors Deg.","Active Directory","A+ Cert.","Install/Troubleshoot/Repair","Associates degree","Printers/Scanner/Copier","Apple","Exchange","Ticketing","Network+ Cert.","MCDST/MCSA Cert.","Clients/Servers","Lotus notes","Unix/Linux","MCP Cert","Citrix","Remote Access/Support","Video","Audio","Call Center","Enterprise","Databases"],
+			datasets : [
+				{
+					fillColor : "rgba(50,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [0.58974359,0.512820513,0.487179487,0.487179487,0.435897436,0.384615385,0.384615385,0.205128205,0.205128205,0.256410256,0.179487179,0.205128205,0.076923077,0.128205128,0.076923077,0.179487179,0.153846154,0.153846154,0.076923077,0.051282051,0.025641026,0.051282051,0.025641026,0.102564103,0,0,0,0,0.025641026]
+				},
+				{
+					fillColor : "rgba(200,200,200,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [0.846153846,0.461538462,0.615384615,0.307692308,0.538461538,0.307692308,0.076923077,0.384615385,0.230769231,0.153846154,0.076923077,0.076923077,0.230769231,0.153846154,0.076923077,0.230769231,0.076923077,0.076923077,0.076923077,0.153846154,0.076923077,0,0.076923077,0.076923077,0.076923077,0.076923077,0.076923077,0.076923077,0]
+				},
+				{
+					fillColor : "rgba(100,100,220,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [0.76,0.48,0.44,0.56,0.4,0.2,0.28,0.32,0.2,0.2,0.24,0.2,0.16,0.16,0.16,0,0.12,0.04,0.12,0.12,0.16,0.12,0.08,0,0,0,0.04,0.04]
+				},
+				{
+					fillColor : "rgba(100,187,100,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [0.684210526,0.684210526,0.526315789,0.315789474,0.368421053,0.157894737,0.105263158,0.263157895,0.263157895,0.157894737,0.157894737,0.052631579,0.157894737,0.052631579,0.210526316,0.105263158,0.052631579,0.105263158,0.052631579,0,0.052631579,0.052631579,0.105263158,0.052631579,0.157894737,0.105263158,0,0,0.052631579]
+				},
+				{
+					fillColor : "rgba(150,50,50,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [0.75,1,0.25,0.5,0.25,0.5,0.5,0,0.75,0,0,0.25,0.25,0.5,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,0]
+				}
+			]
+			
+		}
+
+	var myLine2 = new Chart(document.getElementById("canvas2").getContext("2d")).Bar(barChartData2);
+	
+	</script>
+<br>
+<br>
+<br>
+<div style="background-color:lightgrey;width:900px">
+<br>
+<font style="font-size:20px; font-weight:bold;">Additional categories found worth mentioning</font>
+<br>
+These categories were noticed in some advertisements, can be useful for the job, but were not counted in the advertisements:<br>
+Antivirus, Internet, Desktop imaging and scripting, Virtual Desktop, Cisco, Other specific certifications
+<br>
+<br>
+</div>
+<br>
+<br>
+<div style="background-color:rgba(200,200,200,0.5);width:900px">
+<br>
+<font style="font-size:20px; font-weight:bold;">Source Data</font>
+<br>
+Link to data
+<br>
+<br>
+</div>
+	</body>
+</center>
+</html>
